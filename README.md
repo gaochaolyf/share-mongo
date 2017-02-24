@@ -1,5 +1,3 @@
-# share-mongo
-
 # Mongo相关分享
 
 @(mongodb扩展安装)[概念|使用方式|异常问题]

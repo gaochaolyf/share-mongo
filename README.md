@@ -150,11 +150,11 @@ $manager = new MongoDB\Driver\Manager($uri);
 ```
 
 ### MongoDB异常 均为Save时的报错
-| Exception       |   subscribe |  Time     | 是否影响使用|
+| Exception       |   Subscribe |  Time     | 是否影响使用|
 | :----------- |  :------- |:-------|:-------|
 | Mongodb waiting for replication timed out |等待复制超时  |   2017-02-23 14:57:35 ~ 2017-02-23 14:57:38   |否 primary插入 复制时出错|
 | Failed to send "insert" command with database "illegal_query": socket error or timeout     | 对数据库”illegal_query”发送“插入”命令时失败：套接字错误和超时|   2017-02-23 14:53:30 ~ 2017-02-23 14:57:20  |是 数据丢失|
-| No suitable servers found (`serverSelectionTryOnce` set): [Server closed connection. calling ismaster on '192.168.69.57:27017'] [connection closed calling ismaster on '192.168.70.51:27017'] | 没有发现合适的服务器（` serverselectiontryonce `集）：[Server closed connection. calling ismaster on '192.168.69.57:27017'] [关闭连接的192.168.70.51:27017 ]|  017-02-23 22:48:19 ~ 2017-02-23 22:54:52|是 数据丢失|
+| No suitable servers found (`serverSelectionTryOnce` set): [Server closed connection. calling ismaster on '192.168.69.57:27017'] [connection closed calling ismaster on '192.168.70.51:27017'] | 没有发现合适的服务器（` serverselectiontryonce `集）：[Server closed connection. calling ismaster on '192.168.69.57:27017'] [关闭连接的192.168.70.51:27017 ]|  2017-02-23 22:48:19 ~ 2017-02-23 22:54:52|是 数据丢失|
 
 #### 出错时PHP报错信息
 ``` php
@@ -181,3 +181,6 @@ vim /usr/local/php7/etc/php.ini
 extension=mongodb.so
 ```
 
+### 副本集
+
+http://www.lanceyan.com/tech/mongodb/mongodb_repset1.html
